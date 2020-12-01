@@ -1,0 +1,39 @@
+<!-- 웹페이지를 접속할 때 오전, 오후, 월~토, 일요일. .
+    일때 각각 배경색이 다르도록 출력되게 작성하라. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>방문시간에 따라 다르게 출력</title>
+
+    </head>
+    <body>
+        <h3>일요일은 pink, 다른 요일은 gold 배경</h3>
+        <hr>
+        <script>
+            var current = new Date();
+            var weekday = new Array(7);
+            weekday[0] = "일";
+            weekday[1] = "월";
+            weekday[2] = "화";
+            weekday[3] = "수";
+            weekday[4] = "목";
+            weekday[5] = "금";
+            weekday[6] = "토";
+
+
+            if (current.getDay() == 0) {//오늘이 일요일이면
+                document.body.style.backgroundColor = "pink";
+            }
+            else {
+                document.body.style.backgroundColor = "gold";
+            }
+
+            document.write("오늘 : ");
+            document.write(current.getDate() + "일, ");
+            document.write(weekday[current.getDay()] + "요일");
+        </script>
+        
+    </body>
+</html>

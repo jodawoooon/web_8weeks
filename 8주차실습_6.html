@@ -1,0 +1,38 @@
+<!-- 다음과 같이 랜덤한 색으로 
+    배경색을 칠하도록 하는 웹페이지를 작성하라..-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Math.random()으로 랜덤한 색 만들기</title>
+        <style>
+            div{
+                width : 150px;
+                display: inline-block;
+                padding : 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>16개의 랜덤한 색 만들기</h3>
+        <hr>
+        <script>
+            var color = new String();
+           
+            function random_int(min, max){
+                return Math.floor(Math.random()*(max-min+1))+min;
+            }
+
+            for(i=0;i<16;i++){
+                var R = random_int(0, 255);
+                var G = random_int(0, 255);
+                var B = random_int(0, 255);
+
+                color = "rgb(" + R + "," + G + "," + B + ")"; 
+                document.write("<div style = 'background-color:"+color+"'>"+color+"</div>")
+
+            }               
+        </script>       
+    </body>
+</html>

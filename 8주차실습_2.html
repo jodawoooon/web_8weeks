@@ -1,0 +1,35 @@
+<!-- 프롬프트 함수를 반복 호출하여 5개의 정수를 입력받아 배열에 저장하고 
+    입력된 반대 순으로 출력하는 웹 페이지를 작성하라. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>정수 5개 입력받아 역순으로 출력</title>
+
+    </head>
+    <body>
+        <h3>정수 5개 입력받아 역순으로 출력</h3>
+        <hr>
+        <script>
+            var num = new Array();
+
+            for (i=0;i<5;i++){
+                num[i] = prompt("정수 입력");
+            }
+            document.write("입력된 수의 배열<br>");
+            for(i=0;i<5;i++){
+                document.write(num[i]+" ");
+            }
+            document.write("<hr>");
+
+            document.write("역순으로 재정렬된 수의 배열<br>");
+            for(i=4;i>=0;i--){
+                document.write(num[i]+" ");
+            }
+            document.write("<hr>");
+
+        </script>
+        
+    </body>
+</html>

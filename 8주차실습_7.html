@@ -1,0 +1,60 @@
+<!-- Book 객체를 만들어라. 
+    이 객체는 title, author, price 속성을 가지고 있다. 
+    HTML5, 홍길동, 20000 으로 초기화 하라.
+    (1) Book객체를 작성하고 객체를 출력하라. 
+    (2) 리터럴 표기법으로 객체를 작성하고 출력하라. 
+    (3) 프로토타입으로 작성하고 출력하라..-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Book 객체 만들기</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h3>Book 객체 만들기</h3>
+        <hr>
+        <script>
+
+            //(1) Book객체 작성 및 출력
+            var Book = new Object(); //Book 객체 생성
+            Book.title = "HTML5"; //title 프로퍼티 생성 및 초기화
+            Book.author = "홍길동"; //author 프로퍼티 생성 및 초기화
+            Book.price = 20000; //price 프로퍼티 생성 및 초기화
+
+            document.write("Book : ");
+            document.write(Book.title+", ");
+            document.write(Book.author+", ");
+            document.write(Book.price+"<br>");
+
+            //(2) 리터럴 표기법 
+            var Book2 = { // 프로퍼티 생성 및 초기화
+                title : "HTML5",
+                author : "홍길동",
+                price : 20000
+            };
+
+            document.write("Book2 : ");
+            document.write(Book2.title+", ");
+            document.write(Book2.author+", ");
+            document.write(Book2.price+"<br>");
+
+            //(3) 프로토 타입
+            function book3(title,author,price){
+                this.title = title;
+                this.author = author;
+                this.price = price;
+            }
+
+            var Book3 = new book3("HTML5","홍길동",20000);
+            document.write("Book3 : ");
+            document.write(Book3.title+", ");
+            document.write(Book3.author+", ");
+            document.write(Book3.price+"<br>");
+
+        </script>       
+    </body>
+</html>
